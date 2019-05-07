@@ -30,16 +30,16 @@ public class MainActivity extends AppCompatActivity {
             float ntd = Float.parseFloat(s);
             float usd = ntd/30.9f;
             new AlertDialog.Builder(this)
-                    .setTitle("Result")
-                    .setMessage("USD is "+usd)
-                    .setPositiveButton("OK",null)
+                    .setTitle(R.string.result)
+                    .setMessage(getString(R.string.usd_is)+usd)
+                    .setPositiveButton(R.string.ok,null)
                     .show();
 
         }catch(Exception e){
             new AlertDialog.Builder(this)
-                    .setTitle("Problem")
-                    .setMessage("Please enter your NTD amount")
-                    .setPositiveButton("OK",null)
+                    .setTitle(R.string.problem)
+                    .setMessage(R.string.please_enter_your_ntd_amount)
+                    .setPositiveButton(R.string.ok,null)
                     .show();
         }
 
